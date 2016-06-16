@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <title>TimeHub Login Form</title>
 
-    <!-- Javascript/jQuery Libraries -->
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"</script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="assets/javascript/index.js"></script>
-
-    <!-- Bootstrap & CSS Override + Reset-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+    <!--CSS Stylesheets -->
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    
+    <!-- Bootstrap CSS Override -->
     <link rel="stylesheet" href="assets/css/style2.css">
 
-    <!--CSS Stylesheets -->
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="assets/javascript/index.js"></script>
 
 </head>
 <body>
@@ -49,10 +49,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">Completed Tasks</div>
       <div class="panel-body">
-        <p>Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem 
-        IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem 
-        IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-        <a href="#" data-toggle="popover" title="Popover Header" data-trigger="hover" data-content="Some content">?</a></p>
+        <p>Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
       </div>
 
       <table class="table">
@@ -74,8 +71,10 @@
           <td>12/19/15 - 12:47pm</td>
           <td>12/19/15 - 2:47pm</td>
           <td>02h00m</td>
-          <td></td>
-          <td><i class="fa fa-hashtag fa-lg" aria-hidden="true"></i></td>
+          <td><i class="fa fa-question fa-lg" aria-hidden="false"></i></td>
+          <td><a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">
+              <i class="fa fa-hashtag fa-lg" aria-hidden="false"></a></i>
+          </td>
         </tr>
 
         <tr>
@@ -113,8 +112,16 @@
       </table>
 
     </div><!-- End of panel-default -->
+
+
+
   </div><!-- End of col-md-10 -->
 </div><!-- End of completed tasks row -->
+
+
+
+
+
 
 </div><!-- End of container -->
 
