@@ -10,6 +10,9 @@ $(document).ready(function(){
     $('.container').stop().removeClass('active');
   });
 
+  // Enable popover
+  $('[data-toggle="popover"]').popover()
+
 
 
 
