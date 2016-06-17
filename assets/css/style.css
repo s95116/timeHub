@@ -7,29 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 /* Pen Title */
 .pen-title {
   padding: 50px 0;
   text-align: center;
   letter-spacing: 2px;
-}
-.pen-title h1 {
-  margin: 0 0 20px;
-  font-size: 48px;
-  font-weight: 300;
-}
-.pen-title span {
-  font-size: 12px;
-}
-.pen-title span .fa {
-  color: #ed2553;
-}
-.pen-title span a {
-  color: #ed2553;
-  font-weight: 600;
-  text-decoration: none;
 }
 
 /* Rerun */
