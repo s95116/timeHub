@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+
+    <!-- Modal Stylesheets -->
+    <link rel="stylesheet" href="assets/css/remodal.css">
+    <link rel="stylesheet" href="assets/css/remodal-default-theme.css">
     
     <!-- Bootstrap CSS Override -->
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
@@ -21,7 +25,7 @@
 <div class="row">
   <div class="col-md-12">
     <div class="page-header">
-      <p id="welcomeHeader">Welcome Back</p> <p id="username"></p>
+      <p id="welcomeHeader">Welcome Back</p><p id="username"></p>
     </div>
   </div>
 </div><!-- End of header row -->
@@ -53,6 +57,7 @@
           <th>Description</th>
           <th>Total Alloted Time</th>
           <th>Comments</th> <!-- Make this a question mark that does a pop-up/modal when clicked -->
+          <th>modal test</th>
         </tr>
 
         <tr>
@@ -64,6 +69,22 @@
               data-content="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum">
             <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
             </a>
+          </td>
+          <td>
+            <div class="remodal-bg">
+              <div id="qunit"></div>
+              <a href="#" data-remodal-target="modal">Call</a>
+            </div>
+
+            <div class="remodal" data-remodal-id="modal">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <h1>Remodal</h1>
+                <p>Post new infograph to Sundales's Community Blog.</p>
+                <p>Email Sandra when post is completed so she can email blast her members.</p>
+              <br>
+              <button data-remodal-action="confirm" class="remodal-confirm">Start</button>
+              <button data-remodal-action="cancel" class="remodal-cancel">End</button>
+            </div>
           </td>
         </tr>
       </table>
@@ -85,6 +106,7 @@
 <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="assets/javascript/index.js"></script>
+<script src="assets/javascript/remodal.min.js"></script>
 
 </body>
 </html>
