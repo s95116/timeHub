@@ -36,11 +36,11 @@ $(document).ready(function(){
       });
 
 		function drawSheetName() {
-      var queryString = encodeURIComponent('SELECT A, B');
+      		var queryString = encodeURIComponent('SELECT A, B');
 
-      var query = new google.visualization.Query(
+      		var query = new google.visualization.Query(
           'https://docs.google.com/spreadsheets/d/1iSyZO9DDf65me0ag29S3bzNugiQvtMlsC_Zr_Wg0M7w/edit#gid=0' + queryString);
-      query.send(handleSampleDataQueryResponse);
+      		query.send(handleSampleDataQueryResponse);
     }
 
     function handleSampleDataQueryResponse(response) {
@@ -49,9 +49,14 @@ $(document).ready(function(){
         return;
       }
 
+      var options = {
+  		height: 400,
+  		title: 'New Infograph Posting Statistics',
+  		legend: {position: 'none'}
+		};
       var data = response.getDataTable();
       var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-      chart.draw(data, { height: 400 });
+      chart.draw(data, options);
     }
 
 	})
