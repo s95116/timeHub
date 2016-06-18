@@ -16,7 +16,7 @@ body {
   text-align: center;
   white-space: nowrap;
   font-size: 120px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .page-header{
@@ -41,6 +41,7 @@ body {
   margin-bottom: 0px;
   background-color: inherit;
   font-size: 10px;
+  padding-left: 100px;
 }
 
 a{
@@ -61,19 +62,28 @@ a{
   color:#666666;
   background-color: white;
   border-radius: 15px 50px;
-  padding: 8px;
+  padding: 8px 14px 8px 0px;
   border-color: #ed2553;
   
 }
 
+.btn-primary-text{
+  font-size: 15px;
+  font-weight: 400;
+}
+
 table{
-  text-align: justify;
+  text-align: center;
 }
 
 th{
   font-weight: bold;
+  text-align: center;
 }
 
+td{
+  padding-top:20px;
+}
 
 
 
