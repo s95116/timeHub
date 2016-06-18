@@ -16,6 +16,15 @@
     <!-- Bootstrap CSS Override -->
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
     <link rel="stylesheet" href="assets/css/style2.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        
+    // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+      console.log('loading chart');
+
+    </script>
     
 </head>
 <body>
@@ -61,7 +70,26 @@
         </tr>
 
         <tr>
-          <td><button type="button" class="btn-primary">XR9183</button></td>
+          <td>
+            <div class="remodal-bg">
+              <div id="qunit"></div>
+              <a href="#" data-remodal-target="modal"><button type="button" class="btn-primary">XR9183</a>
+            </div>
+​
+            <div class="remodal" data-remodal-id="modal">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <h1>Remodal</h1>
+                <p>Post new infograph to Sundales's Community Blog.</p>
+                <p>Email Sandra when post is completed so she can email blast her members.</p>
+              <br>
+              <button data-remodal-action="" class="remodal-confirm" id="start">Start</button>
+              <button data-remodal-action="cancel" class="remodal-cancel" id="end">End</button>
+            </div>
+​
+​
+            </button>
+          </td>
+            Add Comment C
           <td>Post new infograph to client's webpage</td>
           <td>01h00mm</td>
           <td>
@@ -98,15 +126,16 @@
 
 </div><!-- End of container -->
 
+<div id="chart_div"></div>
 
 
 <!-- Javascript Libraries-->
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="assets/javascript/index.js"></script>
 <script src="assets/javascript/remodal.min.js"></script>
+<script src="assets/javascript/test.js"></script>
 
 </body>
 </html>
