@@ -1,63 +1,59 @@
 $(document).ready(function(){
 
-var ref = new Firebase('https://timepunch.firebaseio.com/');
 
-//var baseline = 10; This should already be within the database, otherwise it will keep adding
-		console.log(ref);
-
-      // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = google.visualization.arrayToDataTable([
-        ['Year', 'Visitations', { role: 'style' } ],
-        ['2010', 10, 'color: gray'],
-        ['2010', 14, 'color: #76A7FA'],
-        ['2020', 16, 'opacity: 0.2'],
-        ['2040', 22, 'stroke-color: #703593; stroke-width: 4; fill-color: #C5A5CF'],
-        ['2040', 28, 'stroke-color: #871B47; stroke-opacity: 0.6; stroke-width: 8; fill-color: #BC5679; fill-opacity: 0.2']
-      ]);
-
-        // Set chart options
-        var options = {'title':'Time Taken Per Task',
-                       'width':400,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-
-$('#start').on('click', function(){
-	
-	startTime = new Date().getTime();
-	console.log(startTime);
-})
-
-$('#end').on('click', function(){
-	
-	var endTime = new Date().getTime();
-	console.log(endTime);
-	var difference = (endTime - startTime);
-	var elapsed = Math.floor(((difference / 1000) /60));
-	console.log('You took ' + elapsed + ' minutes to complete the task!');
-	ref.push(elapsed);
-	
+      $('#start').on('click', function(){
+		startTime = new Date().getTime();
+		console.log(startTime);
 	})
 
-ref.on("value", function(snapshot) {
-  console.log(snapshot.val());
-  totalArray = snapshot.val();
-})
+      $('#end').on('click', function(){
+      	
+		var endTime = new Date().getTime();
+		console.log(endTime);
+		var difference = (endTime - startTime);
+		var elapsed = Math.floor(((difference / 1000) /60));
+		console.log('You took ' + elapsed + ' minutes to complete the task!');
 
+		var data = { taskCompletion: "Task ", Minutes: elapsed }
+		$.ajax({
+        url: 'https://sheetsu.com/apis/v1.0/a07b7a865ae1',
+        data: data,
+        dataType: 'json',
+        type: 'POST',
 
+        // place for handling successful response
+        // showing (redirecting to) something like /thanks.html
+        // page could be a good idea
+        success: function(data) {
+          console.log("Workin!");
+        },
 
+        // handling error response
+        error: function(data) {
+          console.log(data);
+        }
+      });
+
+		function drawSheetName() {
+      var queryString = encodeURIComponent('SELECT A, B');
+
+      var query = new google.visualization.Query(
+          'https://docs.google.com/spreadsheets/d/1iSyZO9DDf65me0ag29S3bzNugiQvtMlsC_Zr_Wg0M7w/edit#gid=0' + queryString);
+      query.send(handleSampleDataQueryResponse);
+    }
+
+    function handleSampleDataQueryResponse(response) {
+      if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+      }
+
+      var data = response.getDataTable();
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, { height: 400 });
+    }
+
+	})
+
+     
 });
