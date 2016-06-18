@@ -57,6 +57,14 @@ a{
   width: 100%;
 }
 
+.btn-primary{
+  color:#666666;
+  background-color: white;
+  border-radius: 15px 50px;
+  padding: 8px;
+  border-color: #ed2553;
+}
+
 table{
   text-align: justify;
 }

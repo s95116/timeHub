@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+
+    <!-- Modal Stylesheets -->
+    <link rel="stylesheet" href="assets/css/remodal.css">
+    <link rel="stylesheet" href="assets/css/remodal-default-theme.css">
     
     <!-- Bootstrap CSS Override -->
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
@@ -21,7 +25,7 @@
 <div class="row">
   <div class="col-md-12">
     <div class="page-header">
-      <p id="welcomeHeader">Welcome Back</p> <p id="username"></p>
+      <p id="welcomeHeader">Welcome Back</p><p id="username"></p>
     </div>
   </div>
 </div><!-- End of header row -->
@@ -32,7 +36,7 @@
   <ol class="breadcrumb">
     <li><a href="#" title="#" id="second-link">Outstanding Tasks</a></li>
     <li><a href="#" title="#" id="third-link">New Task</a></li>
-    <li><a href="#" title="#" id="third-link">Log Out</a></li>
+    <li><a href="index.html" title="index" id="third-link">Log Out</a></li>
   </ol>
 
   </div>
@@ -53,18 +57,34 @@
           <th>Description</th>
           <th>Total Alloted Time</th>
           <th>Comments</th> <!-- Make this a question mark that does a pop-up/modal when clicked -->
+          <th>modal test</th>
         </tr>
 
         <tr>
-          <td>XR9183</td>
+          <td><button type="button" class="btn-primary">XR9183</button></td>
           <td>Post new infograph to client's webpage</td>
           <td>01h00mm</td>
           <td>
             <a href="#" data-toggle="popover" title="Employer Comment" data-trigger="hover" data-trigger="click" 
-              data-content="Excellent job. You increased the bandwith efficancy of the clients site by 20%!
-                            Keep up the good work.">
+              data-content="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum">
             <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
             </a>
+          </td>
+          <td>
+            <div class="remodal-bg">
+              <div id="qunit"></div>
+              <a href="#" data-remodal-target="modal">Call</a>
+            </div>
+
+            <div class="remodal" data-remodal-id="modal">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <h1>Remodal</h1>
+                <p>Post new infograph to Sundales's Community Blog.</p>
+                <p>Email Sandra when post is completed so she can email blast her members.</p>
+              <br>
+              <button data-remodal-action="confirm" class="remodal-confirm">Start</button>
+              <button data-remodal-action="cancel" class="remodal-cancel">End</button>
+            </div>
           </td>
         </tr>
       </table>
@@ -86,6 +106,7 @@
 <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="assets/javascript/index.js"></script>
+<script src="assets/javascript/remodal.min.js"></script>
 
 </body>
 </html>
