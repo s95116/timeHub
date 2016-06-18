@@ -26,6 +26,7 @@ $(document).ready(function(){
         // page could be a good idea
         success: function(data) {
           console.log("Workin!");
+          drawSheetName();
         },
 
         // handling error response
