@@ -11,11 +11,48 @@ $(document).ready(function(){
   });
 
   // Enable popover
-  $('[data-toggle="popover"]').popover()
+  //$('[data-toggle="popover"]').popover()
 
+  $('#button').on('click', function (){
+    var ref = new Firebase('https://loginauthenticator.firebaseio.com/');
 
+    var emailAddress = $('#newEmail').val();
+    var newPassword = $('#newPassword').val();
+    var repeatPassword = $('#repeatPassword').val();
+    
+    //creates user in firebase
+    if(newPassword===repeatPassword){
+    ref.createUser({
+      email    : emailAddress,
+      password : newPassword
+  }, function(error, userData) {
+      if (error) {
+        console.log("Error creating user:", error);
+    } else {
+      console.log("Successfully created user account with uid:", userData.uid);
+    }
+  });
+  
+    };
+  });
 
-
-
+  //References the users and checks for matches email & password
+  $('#mainButton').on('click', function(){
+    var ref = new Firebase('https://loginauthenticator.firebaseio.com/');
+    var userEmail = $('#mainEmail').val();
+    var userPassword = $('#mainPassword').val();
+    
+    ref.authWithPassword({
+      email    : userEmail,
+      password : userPassword
+    }, function(error, authData) {
+     if (error) {
+      console.log("Login Failed!", error);
+    } else {
+      location.replace('ticket.html');
+      console.log("Authenticated successfully with payload:", authData);
+    }
+});
+  });
 
 });

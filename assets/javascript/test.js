@@ -1,21 +1,29 @@
 $(document).ready(function(){
-
+      $('#second-link').on('click', function(){
+        $('#mainContent').css('visibility', 'visible');
+        $('#chart_div').remove();
+      })
 
       $('#start').on('click', function(){
 		startTime = new Date().getTime();
+
+    $('#start').attr('disabled',true);
 		console.log(startTime);
 	})
 
       $('#end').on('click', function(){
-      	
-		var endTime = new Date().getTime();
-		console.log(endTime);
-		var difference = (endTime - startTime);
-		var elapsed = Math.floor(((difference / 1000) /60));
-		console.log('You took ' + elapsed + ' minutes to complete the task!');
+          $('#mainContent').css('visibility', 'hidden');    
+          $('#start').removeAttr('disabled');
+          //Add checkbox to table
+          $('#second-row:last').append('<td><i class="fa fa-check fa-lg" aria-hidden="true"></i></td>');
+          var endTime = new Date().getTime();
+          console.log(endTime);
+          var difference = (endTime - startTime);
+          var elapsed = Math.floor(((difference / 1000) /60));
+          console.log('You took ' + elapsed + ' minutes to complete the task!');
 
-		var data = { taskCompletion: "Task ", Minutes: elapsed }
-		$.ajax({
+          var data = { taskCompletion: "Task ", Minutes: elapsed }
+		    $.ajax({
         url: 'https://sheetsu.com/apis/v1.0/a07b7a865ae1',
         data: data,
         dataType: 'json',
@@ -36,11 +44,11 @@ $(document).ready(function(){
       });
 
 		function drawSheetName() {
-      var queryString = encodeURIComponent('SELECT A, B');
+      		var queryString = encodeURIComponent('SELECT A, B');
 
-      var query = new google.visualization.Query(
+      		var query = new google.visualization.Query(
           'https://docs.google.com/spreadsheets/d/1iSyZO9DDf65me0ag29S3bzNugiQvtMlsC_Zr_Wg0M7w/edit#gid=0' + queryString);
-      query.send(handleSampleDataQueryResponse);
+      		query.send(handleSampleDataQueryResponse);
     }
 
     function handleSampleDataQueryResponse(response) {
@@ -49,10 +57,16 @@ $(document).ready(function(){
         return;
       }
 
+      var options = {
+  		height: 400,
+  		title: 'New Infograph Posting Statistics',
+  		legend: {position: 'none'}
+		};
       var data = response.getDataTable();
       var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-      chart.draw(data, { height: 400 });
+      chart.draw(data, options);
     }
+  
 
 	})
 

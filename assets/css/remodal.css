@@ -92,3 +92,7 @@ html.remodal-is-locked {
   /* Disable Anti-FOUC */
   display: inline-block;
 }
+
+.remodal-is-closed{
+  font-size:5px;
+}
