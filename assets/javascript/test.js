@@ -6,20 +6,24 @@ $(document).ready(function(){
 
       $('#start').on('click', function(){
 		startTime = new Date().getTime();
+
+    $('#start').attr('disabled',true);
 		console.log(startTime);
 	})
 
       $('#end').on('click', function(){
+          $('#mainContent').css('visibility', 'hidden');    
+          $('#start').removeAttr('disabled');
+          //Add checkbox to table
+          $('#second-row:last').append('<td><i class="fa fa-check fa-lg" aria-hidden="true"></i></td>');
+          var endTime = new Date().getTime();
+          console.log(endTime);
+          var difference = (endTime - startTime);
+          var elapsed = Math.floor(((difference / 1000) /60));
+          console.log('You took ' + elapsed + ' minutes to complete the task!');
 
-    $('#mainContent').css('visibility', 'hidden');          	
-		var endTime = new Date().getTime();
-		console.log(endTime);
-		var difference = (endTime - startTime);
-		var elapsed = Math.floor(((difference / 1000) /60));
-		console.log('You took ' + elapsed + ' minutes to complete the task!');
-
-		var data = { taskCompletion: "Task ", Minutes: elapsed }
-		$.ajax({
+          var data = { taskCompletion: "Task ", Minutes: elapsed }
+		    $.ajax({
         url: 'https://sheetsu.com/apis/v1.0/a07b7a865ae1',
         data: data,
         dataType: 'json',
@@ -62,6 +66,7 @@ $(document).ready(function(){
       var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
       chart.draw(data, options);
     }
+  
 
 	})
 
