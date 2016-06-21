@@ -1,5 +1,8 @@
 $(document).ready(function(){
-
+      $('#second-link').on('click', function(){
+        $('#mainContent').css('visibility', 'visible');
+        $('#chart_div').remove();
+      })
 
       $('#start').on('click', function(){
 		startTime = new Date().getTime();
@@ -7,7 +10,8 @@ $(document).ready(function(){
 	})
 
       $('#end').on('click', function(){
-      	
+
+    $('#mainContent').css('visibility', 'hidden');          	
 		var endTime = new Date().getTime();
 		console.log(endTime);
 		var difference = (endTime - startTime);
