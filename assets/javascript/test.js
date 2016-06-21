@@ -1,5 +1,8 @@
 $(document).ready(function(){
-
+      $('#second-link').on('click', function(){
+        $('#mainContent').css('visibility', 'visible');
+        $('#chart_div').remove();
+      })
 
       $('#start').on('click', function(){
 		startTime = new Date().getTime();
@@ -9,25 +12,18 @@ $(document).ready(function(){
 	})
 
       $('#end').on('click', function(){
-      	$('#start').removeAttr('disabled');
+          $('#mainContent').css('visibility', 'hidden');    
+          $('#start').removeAttr('disabled');
+          //Add checkbox to table
+          $('#second-row:last').append('<td><i class="fa fa-check fa-lg" aria-hidden="true"></i></td>');
+          var endTime = new Date().getTime();
+          console.log(endTime);
+          var difference = (endTime - startTime);
+          var elapsed = Math.floor(((difference / 1000) /60));
+          console.log('You took ' + elapsed + ' minutes to complete the task!');
 
-      //Add checkbox to table
-       $('#second-row:last').append('<td><i class="fa fa-check fa-lg" aria-hidden="true"></i></td>');
-
-
-
-		var endTime = new Date().getTime();
-		console.log(endTime);
-		var difference = (endTime - startTime);
-		var elapsed = Math.floor(((difference / 1000) /60));
-		console.log('You took ' + elapsed + ' minutes to complete the task!');
-
-
-
-
-
-		var data = { taskCompletion: "Task ", Minutes: elapsed }
-		$.ajax({
+          var data = { taskCompletion: "Task ", Minutes: elapsed }
+		    $.ajax({
         url: 'https://sheetsu.com/apis/v1.0/a07b7a865ae1',
         data: data,
         dataType: 'json',
