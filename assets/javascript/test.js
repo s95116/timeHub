@@ -3,16 +3,28 @@ $(document).ready(function(){
 
       $('#start').on('click', function(){
 		startTime = new Date().getTime();
+
+    $('#start').attr('disabled',true);
 		console.log(startTime);
 	})
 
       $('#end').on('click', function(){
-      	
+      	$('#start').removeAttr('disabled');
+
+      //Add checkbox to table
+       $('#second-row:last').append('<td><i class="fa fa-check fa-lg" aria-hidden="true"></i></td>');
+
+
+
 		var endTime = new Date().getTime();
 		console.log(endTime);
 		var difference = (endTime - startTime);
 		var elapsed = Math.floor(((difference / 1000) /60));
 		console.log('You took ' + elapsed + ' minutes to complete the task!');
+
+
+
+
 
 		var data = { taskCompletion: "Task ", Minutes: elapsed }
 		$.ajax({
@@ -58,6 +70,7 @@ $(document).ready(function(){
       var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
       chart.draw(data, options);
     }
+  
 
 	})
 
