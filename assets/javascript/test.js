@@ -17,11 +17,13 @@ $(document).ready(function(){
           $('#chart_div').css('visibility', 'visible');    
           $('#start').removeAttr('disabled');
 
-          if(i===0){
           //Add checkbox to table
-          $('#second-row:last').append('<td><i class="fa fa-check fa-lg" aria-hidden="true"></i></td>');
+          if(i===0){
+          
+          $('#lastItem').html('<td><i class="fa fa-check fa-lg" aria-hidden="true" id="newitem"></i></td>');
+          $('#lastItem').attr('id', "lastTD");
           i++;
-          }
+          };
 
           
           var endTime = new Date().getTime();
