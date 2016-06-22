@@ -4,10 +4,6 @@ body {
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
 }
 
-
-
-/*ticket.html style*/
-
 #welcomeHeader{
   color: #FFF;
   text-align: center;
@@ -38,7 +34,17 @@ body {
   margin-bottom: 0px;
   background-color: inherit;
   font-size: 10px;
-  padding-left: 100px;
+  margin-left: 5px;
+  border-style: none;
+}
+
+.breadcrumb>li+li:before{
+  content: none;
+}
+
+#second-link, #third-link{
+  margin-left: 115px;
+
 }
 
 a{
@@ -88,8 +94,6 @@ a:visited, a:hover, a:active, a:focus {
     box-shadow: none;
 }
  
-
-
 table{
   text-align: center;
 }
@@ -97,10 +101,6 @@ table{
 th{
   font-weight: bold;
   text-align: center;
-}
-
-td{
-  padding-top:20px;
 }
 
 
