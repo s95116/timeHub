@@ -103,17 +103,27 @@ th{
   text-align: center;
 }
 
-<<<<<<< HEAD
 td{
   padding-top:20px;
+}
+
+#newitem{
+  margin-left:30px;
+  border-color:red;
+  border-width: 1px;
+  border-style: solid;
+  padding-top:0;
+}
+
+#lastTD{
+  padding-top: 0px;
+  padding-bottom:10px; 
 }
 
 .generalInfo {
   margin-top: 10px;
 }
 
-=======
->>>>>>> e9b9c26ba349c153923a67ecd3d80199bc1704c1
 
 
 
