@@ -47,10 +47,10 @@ a{
   margin-left: 10px;
 }
 
-/* unvisited link */
-a:link, a:visited, a:hover, a:active {
-    color: none;
-    background-color: none;
+
+a:visited, a:hover, a:active, a:focus {
+    color: #ed2553;
+    text-decoration: none;
 }
 
 #contentbox{
@@ -62,18 +62,33 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .btn-primary{
-  color:#666666;
-  background-color: white;
+  /*color:#666666;*/
+  background: white;
   border-radius: 15px 50px;
   padding: 8px 14px 8px 0px;
   border-color: #ed2553;
-  
 }
 
 .btn-primary-text{
   font-size: 15px;
   font-weight: 400;
 }
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: white;
+    color: white;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
+    background: none;
+    box-shadow: none;
+}
+ 
+
 
 table{
   text-align: center;
