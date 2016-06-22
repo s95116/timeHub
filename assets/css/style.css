@@ -6,7 +6,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.register {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    color: white;
+    z-index: 1;
+}
+.container.active .register{
+  display: none;
+}
 /* Pen Title */
 .pen-title {
   padding: 50px 0;
@@ -424,3 +433,6 @@ body {
     opacity: 0;
   }
 }
+
+
+
