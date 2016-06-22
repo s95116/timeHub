@@ -10,8 +10,8 @@ $(document).ready(function(){
     $('.container').stop().removeClass('active');
   });
 
-  // Enable popover
-  //$('[data-toggle="popover"]').popover()
+  //Enable popover
+  // $('[data-toggle="popover"]').popover();
 
   $('#button').on('click', function (){
     var ref = new Firebase('https://loginauthenticator.firebaseio.com/');
