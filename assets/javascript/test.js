@@ -1,7 +1,9 @@
 $(document).ready(function(){
-      $('#second-link').on('click', function(){
+      var i = 0;
+
+      $('#first-link').on('click', function(){
         $('#mainContent').css('visibility', 'visible');
-        $('#chart_div').remove();
+        $('#chart_div').css('visibility', 'hidden');
       })
 
       $('#start').on('click', function(){
@@ -12,10 +14,14 @@ $(document).ready(function(){
 	})
 
       $('#end').on('click', function(){
-          $('#mainContent').css('visibility', 'hidden');    
+          $('#mainContent').css('visibility', 'hidden');
+          $('#chart_div').css('visibility', 'visible');    
           $('#start').removeAttr('disabled');
+          if(i===0){
           //Add checkbox to table
           $('#second-row:last').append('<td><i class="fa fa-check fa-lg" aria-hidden="true"></i></td>');
+          i++;
+          }
           var endTime = new Date().getTime();
           console.log(endTime);
           var difference = (endTime - startTime);
