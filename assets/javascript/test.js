@@ -1,5 +1,5 @@
 $(document).ready(function(){
-      $('#second-link').on('click', function(){
+      $('#first-link').on('click', function(){
         $('#mainContent').css('visibility', 'visible');
         $('#chart_div').remove();
       })
@@ -14,8 +14,12 @@ $(document).ready(function(){
       $('#end').on('click', function(){
           $('#mainContent').css('visibility', 'hidden');    
           $('#start').removeAttr('disabled');
+
           //Add checkbox to table
           $('#second-row:last').append('<td><i class="fa fa-check fa-lg" aria-hidden="true"></i></td>');
+
+
+
           var endTime = new Date().getTime();
           console.log(endTime);
           var difference = (endTime - startTime);
