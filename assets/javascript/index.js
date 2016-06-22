@@ -15,7 +15,7 @@ $(document).ready(function(){
 
   $('#button').on('click', function (){
     var ref = new Firebase('https://loginauthenticator.firebaseio.com/');
-
+    $('.container').stop().removeClass('active');
     var emailAddress = $('#newEmail').val();
     var newPassword = $('#newPassword').val();
     var repeatPassword = $('#repeatPassword').val();
