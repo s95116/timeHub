@@ -4,10 +4,6 @@ body {
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
 }
 
-
-
-/*ticket.html style*/
-
 #welcomeHeader{
   color: #FFF;
   text-align: center;
@@ -38,7 +34,17 @@ body {
   margin-bottom: 0px;
   background-color: inherit;
   font-size: 10px;
-  padding-left: 100px;
+  margin-left: 5px;
+  border-style: none;
+}
+
+.breadcrumb>li+li:before{
+  content: none;
+}
+
+#second-link, #third-link{
+  margin-left: 115px;
+
 }
 
 a{
@@ -47,10 +53,10 @@ a{
   margin-left: 10px;
 }
 
-/* unvisited link */
-a:link, a:visited, a:hover, a:active {
-    color: none;
-    background-color: none;
+
+a:visited, a:hover, a:active, a:focus {
+    color: #ed2553;
+    text-decoration: none;
 }
 
 #contentbox{
@@ -62,12 +68,11 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .btn-primary{
-  color:#666666;
-  background-color: white;
+  /*color:#666666;*/
+  background: white;
   border-radius: 15px 50px;
   padding: 8px 14px 8px 0px;
   border-color: #ed2553;
-  
 }
 
 .btn-primary-text{
@@ -75,6 +80,20 @@ a:link, a:visited, a:hover, a:active {
   font-weight: 400;
 }
 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: white;
+    color: white;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
+    background: none;
+    box-shadow: none;
+}
+ 
 table{
   text-align: center;
 }
@@ -84,6 +103,7 @@ th{
   text-align: center;
 }
 
+<<<<<<< HEAD
 td{
   padding-top:20px;
 }
@@ -92,6 +112,8 @@ td{
   margin-top: 10px;
 }
 
+=======
+>>>>>>> e9b9c26ba349c153923a67ecd3d80199bc1704c1
 
 
 
