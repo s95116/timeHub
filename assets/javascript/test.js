@@ -24,7 +24,6 @@ $(document).ready(function(){
           $('#lastItem').attr('id', "lastTD");
           i++;
           };
-
           
           var endTime = new Date().getTime();
           console.log(endTime);
