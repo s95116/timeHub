@@ -103,21 +103,16 @@ th{
   text-align: center;
 }
 
-td{
-  padding-top:20px;
+tr{
+padding-bottom:0px ;
 }
 
 #newitem{
   margin-left:30px;
-  border-color:red;
-  border-width: 1px;
-  border-style: solid;
-  padding-top:0;
-}
 
-#lastTD{
-  padding-top: 0px;
-  padding-bottom:10px; 
+  padding-top:11px;
+  vertical-align: top;
+  padding-left: 10px;
 }
 
 .generalInfo {
