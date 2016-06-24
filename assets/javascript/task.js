@@ -1,5 +1,9 @@
 $(document).ready(function(){
       var i = 0;
+
+      //Enable popover
+      $('[data-toggle="popover"]').popover();
+
       $('#first-link').on('click', function(){
         $('#mainContent').css('visibility', 'visible');
         $('#chart_div').css('visibility', 'hidden');

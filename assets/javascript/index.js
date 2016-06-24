@@ -10,9 +10,6 @@ $(document).ready(function(){
     $('.container').stop().removeClass('active');
   });
 
-  //Enable popover
-  // $('[data-toggle="popover"]').popover();
-
   $('#button').on('click', function (){
     var ref = new Firebase('https://loginauthenticator.firebaseio.com/');
     $('.container').stop().removeClass('active');
@@ -49,7 +46,7 @@ $(document).ready(function(){
      if (error) {
       console.log("Login Failed!", error);
     } else {
-      location.replace('ticket.html');
+      location.replace('task.html');
       console.log("Authenticated successfully with payload:", authData);
     }
 });
