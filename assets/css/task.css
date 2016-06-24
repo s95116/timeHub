@@ -53,7 +53,6 @@ a{
   margin-left: 10px;
 }
 
-
 a:visited, a:hover, a:active, a:focus {
     color: #ed2553;
     text-decoration: none;
@@ -67,31 +66,30 @@ a:visited, a:hover, a:active, a:focus {
   width: 100%;
 }
 
-.btn-primary{
-  /*color:#666666;*/
+.btn-default{
   background: white;
+  border: 4px #ed2553 solid;
   border-radius: 15px 50px;
-  padding: 8px 14px 8px 0px;
-  border-color: #ed2553;
-}
+  padding: 15px;
 
-.btn-primary-text{
   font-size: 15px;
   font-weight: 400;
 }
 
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
+table.table p.generalInfo {
+  line-height: 1;
 }
- 
-.btn-primary {
-    background: white;
-    color: white;
+
+.btn-default > a.btn-primary-text:hover {
+  background: none;
 }
- 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
-    background: none;
-    box-shadow: none;
+.btn-default:hover, .btn-default:active, .btn-default:focus  {
+  background: white !important;
+  border: 4px #ed2553 solid !important;
+}
+.btn-primary-text{
+  font-size: 15px !important;
+  font-weight: 400 !important;
 }
  
 table{
