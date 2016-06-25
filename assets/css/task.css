@@ -42,21 +42,36 @@ body {
   content: none;
 }
 
-#second-link, #third-link{
-  margin-left: 115px;
-
-}
-
-a{
+#first-link, #second-link, #third-link{
   color: #ed2553;
   font-size: 28px;
   margin-left: 10px;
 }
 
-a:visited, a:hover, a:focus {
-    color: #ed2553;
-    text-decoration: none;
+#second-link, #third-link{
+  margin-left: 115px;
 }
+
+/*#first-link:visited, #first-link:focus {
+    color: yellow;
+    text-decoration: none;
+}*/
+#first-link:active{
+  text-underline-position: under;
+}
+/*
+a:active, a:hover, {
+  text-decoration: underline;
+  text-decoration-color: #00355F; 
+  border-radius: 1px;
+}
+
+a.first-link:active{
+  text-decoration: underline;
+  text-decoration-color: #00355F; 
+  border-radius: 1px;
+}*/
+
 
 #contentbox{
   margin-top:15px;
