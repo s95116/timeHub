@@ -42,6 +42,10 @@ body {
   content: none;
 }
 
+a:visited, a:focus{
+  text-decoration: none;
+}
+
 #first-link, #second-link, #third-link{
   color: #ed2553;
   font-size: 28px;
