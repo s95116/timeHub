@@ -42,20 +42,24 @@ body {
   content: none;
 }
 
-#second-link, #third-link{
-  margin-left: 115px;
-
-}
-
-a{
+#first-link, #second-link, #third-link{
   color: #ed2553;
   font-size: 28px;
   margin-left: 10px;
 }
 
-a:visited, a:hover, a:focus {
-    color: #ed2553;
-    text-decoration: none;
+#second-link, #third-link{
+  margin-left: 115px;
+}
+
+#first-link:hover{
+  text-decoration: none;
+}
+
+#first-link.active{
+  border-bottom-color: #00355F;
+  border-style:solid;
+  border-width: 0 0 2px 0;
 }
 
 #contentbox{
