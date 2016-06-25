@@ -15,7 +15,9 @@
     
     <!-- Bootstrap CSS Override -->
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/task.css">
+
+    <!-- Google Chart -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <script type="text/javascript">
@@ -32,7 +34,7 @@
 <div class="container">
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-12 ">
     <div class="page-header">
       <p id="welcomeHeader">Welcome Back</p><p id="username"></p>
     </div>
@@ -43,9 +45,11 @@
   <div class="col-md-8 col-md-offset-2" id="navbar">
 
   <ol class="breadcrumb">
-    <li><a href="#" title="#" id="second-link">Outstanding Tasks</a></li>
-    <li><a href="#" title="#" id="third-link">New Task</a></li>
-    <li><a href="index.html" title="index" id="third-link">Log Out</a></li>
+
+    <li><a href="#" title="Outstanding-Task" id="first-link" class="active">Outstanding Tasks</a></li>
+    <li><a href="newtask.html" title="New-Task" id="second-link">New Task</a></li>
+    <li><a href="index.html" title="Log-Out" id="third-link">Log Out</a></li>
+
   </ol>
 
   </div>
@@ -55,7 +59,7 @@
   <div class="col-md-10 col-md-offset-1" id="contentbox">
 
     <div class="panel panel-default">
-      <div class="panel-heading">Oustanding Tasks</div>
+      <div class="panel-heading">Outstanding Tasks</div>
 
       <table class="table">
         <tr>
@@ -70,7 +74,7 @@
           <td>
             <div class="remodal-bg">
               <div id="qunit"></div>
-              <a href="#" data-remodal-target="modal" class="btn-primary-text"><button type="button" class="btn-primary">XR9183</a>
+            <a data-remodal-target="modal" class="btn btn-default">XR9183</a>
             </div>
 ​
             <div class="remodal" data-remodal-id="modal">
@@ -86,14 +90,17 @@
 ​
             </button>
           </td>
-          <td>Post new infograph to client's webpage</td>
-          <td>01h00mm</td>
+
+          <td><p class="generalInfo">Post new infograph to client's webpage</p></td>
+          <td><p class="generalInfo">01h00mm</p></td>
+
           <td>
             <a href="#" data-toggle="popover" title="Comments" data-trigger="hover" data-trigger="click" 
-              data-content="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum">
+              data-content="Don't forget to use the new VPN!!!">
             <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
             </a>
           </td>
+          <td id="lastItem"></td>
         </tr>
       </table>
 
@@ -115,7 +122,7 @@
 <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 <script src="assets/javascript/index.js"></script>
 <script src="assets/javascript/remodal.min.js"></script>
-<script src="assets/javascript/test.js"></script>
+<script src="assets/javascript/task.js"></script>
 
 </body>
 </html>

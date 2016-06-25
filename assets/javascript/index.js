@@ -10,12 +10,9 @@ $(document).ready(function(){
     $('.container').stop().removeClass('active');
   });
 
-  // Enable popover
-  //$('[data-toggle="popover"]').popover()
-
   $('#button').on('click', function (){
     var ref = new Firebase('https://loginauthenticator.firebaseio.com/');
-
+    $('.container').stop().removeClass('active');
     var emailAddress = $('#newEmail').val();
     var newPassword = $('#newPassword').val();
     var repeatPassword = $('#repeatPassword').val();
@@ -48,8 +45,11 @@ $(document).ready(function(){
     }, function(error, authData) {
      if (error) {
       console.log("Login Failed!", error);
+      $('#mainEmail').val('');
+      $('#mainPassword').val('');
+      $('#mainEmail').val('That is incorrect. Try again.');
     } else {
-      location.replace('ticket.html');
+      location.replace('task.html');
       console.log("Authenticated successfully with payload:", authData);
     }
 });

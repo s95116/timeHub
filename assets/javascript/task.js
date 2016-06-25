@@ -1,21 +1,36 @@
 $(document).ready(function(){
-      $('#second-link').on('click', function(){
+      var i = 0;
+
+      //Enable popover
+      $('[data-toggle="popover"]').popover();
+
+      $('#first-link').on('click', function(){
         $('#mainContent').css('visibility', 'visible');
-        $('#chart_div').remove();
+        $('#chart_div').css('visibility', 'hidden');
       })
 
       $('#start').on('click', function(){
 		startTime = new Date().getTime();
 
     $('#start').attr('disabled',true);
+    //Grays out start button
+    $('#start').css('opacity',0.2);
 		console.log(startTime);
 	})
 
       $('#end').on('click', function(){
-          $('#mainContent').css('visibility', 'hidden');    
+          $('#mainContent').css('visibility', 'hidden');
+          $('#chart_div').css('visibility', 'visible');    
           $('#start').removeAttr('disabled');
+
           //Add checkbox to table
-          $('#second-row:last').append('<td><i class="fa fa-check fa-lg" aria-hidden="true"></i></td>');
+          if(i===0){
+          
+          $('#lastItem').html('<td><i class="fa fa-check fa-lg" aria-hidden="true" id="newitem"></i></td>');
+          $('#lastItem').attr('id', "lastTD");
+          i++;
+          };
+          
           var endTime = new Date().getTime();
           console.log(endTime);
           var difference = (endTime - startTime);
