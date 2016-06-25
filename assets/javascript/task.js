@@ -72,7 +72,7 @@ $(document).ready(function(){
 
       var options = {
   		height: 400,
-  		title: 'New Infograph Posting Statistics',
+  		title: 'New Info-graph Statistics',
   		legend: {position: 'none'}
 		};
       var data = response.getDataTable();

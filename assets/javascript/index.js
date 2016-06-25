@@ -45,6 +45,9 @@ $(document).ready(function(){
     }, function(error, authData) {
      if (error) {
       console.log("Login Failed!", error);
+      $('#mainEmail').val('');
+      $('#mainPassword').val('');
+      $('#mainEmail').val('That is incorrect. Try again.');
     } else {
       location.replace('task.html');
       console.log("Authenticated successfully with payload:", authData);
