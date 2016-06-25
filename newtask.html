@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Create a New Task</title>
+
+    <!--CSS Stylesheets -->
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+    
+    <!-- Bootstrap CSS Override -->
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="assets/css/newtask.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+  <img src="assets/images/logo.png" class="logo-pic">
+  </div>
+</div><!-- End of header row -->
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2" id="navbar">
+
+  <ol class="breadcrumb">
+
+    <li><a href="task.html" title="Outstanding-Task" id="first-link" class="active">Outstanding Tasks</a></li>
+    <li><a href="newtask.html" title="New-Task" id="second-link" class="active">New Task</a></li>
+    <li><a href="index.html" title="Log-Out" id="third-link">Log Out</a></li>
+
+  </ol>
+
+  </div>
+</div><!-- End of navbar row -->
+
+<div class="row" id="mainContent">
+  <div class="col-md-8 col-md-offset-2" id="contentbox">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Create a New Task</div>
+
+      <div class="form-group">
+      <form id="task-form">
+          <label for="task">Task ID</label> 
+          <input class="form-control" id="newTaskInput" placeholder="" type="text"> 
+
+          <label for="description">Description</label> 
+          <input class="form-control" id="newDescriptionInput" placeholder="Enter a description of task" type="text">
+          
+          <label for="tasktime">Task Time</label> 
+          <input class="form-control" id="newtaskTime" placeholder="Enter length of task in HH:MM">
+          
+          <label for="comments">Comments</label>
+          <input class="form-control" id="newComment" placeholder="Enter your comments about the task" type="text">
+      </form>
+
+        <button class="btn btn-default" id="addNewTask" type="submit">Submit</button>
+      </div>
+
+    </div><!-- End of panel-default -->
+
+
+
+  </div><!-- End of col-md-10 -->
+</div><!-- End of completed tasks row -->
+
+</div><!-- End of container -->
+
+<!-- Javascript Libraries-->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script src="assets/javascript/newtask.js"></script>
+
+</body>
+</html>

@@ -4,16 +4,9 @@ body {
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
 }
 
-#welcomeHeader{
-  color: #FFF;
-  text-align: center;
-  white-space: nowrap;
-  font-size: 120px;
-  font-weight: 400;
-}
-
-.page-header{
-  border-bottom: none;
+.logo-pic{
+  margin-left: 425px;
+  padding-bottom: 30px;
 }
 
 #navbar{
@@ -27,7 +20,16 @@ body {
 
   padding-top: 15px;
   padding-bottom: 15px;
+}
 
+#contentbox{
+  margin-top: 40px;
+}
+
+#task-form{
+  padding-left:15px;
+  padding-right:15px;
+  padding-top: 5px;
 }
 
 .breadcrumb{
@@ -44,7 +46,6 @@ body {
 
 #second-link, #third-link{
   margin-left: 115px;
-
 }
 
 a{
@@ -54,16 +55,8 @@ a{
 }
 
 a:visited, a:hover, a:focus {
-    color: #ed2553;
-    text-decoration: none;
-}
-
-#contentbox{
-  margin-top:15px;
-}
-
-.popover{
-  width: 100%;
+  color: #ed2553;
+  text-decoration: none;
 }
 
 .btn-default{
@@ -71,6 +64,7 @@ a:visited, a:hover, a:focus {
   border: 2px #ed2553 solid;
   border-radius: 15px 50px;
   padding: 15px;
+  margin:15px 0 0 15px;
   font-size: 15px;
   font-weight: 400;
 }
@@ -90,29 +84,6 @@ table.table p.generalInfo {
   font-size: 15px !important;
   font-weight: 400 !important;
 }
- 
-table{
-  text-align: center;
-}
-
-th{
-  font-weight: bold;
-  text-align: center;
-}
-
-.fa{
-  margin-top: 16px;
-}
-
-#newitem{
-  margin-left:30px;
-  vertical-align: top;
-  padding-left: 10px;
-}
-
-.generalInfo {
-  margin-top: 20px;
-}
 
 /*Media Queries*/
 @media(min-width:600px) and (max-width:749px){
@@ -121,30 +92,27 @@ th{
   #third-link{ margin-left: 95px; }
   #first-link, #second-link, #third-link{
   font-size: 20px;}
-  #welcomeHeader{font-size: 90px;})
+  .logo-pic{margin-left:180px;}
 }
 
 @media(min-width:750px) and (max-width:992px) {
   #first-link { margin-left:20px; }
   #second-link{ margin-left: 80px; }
   #third-link{ margin-left:80px; }
-  #welcomeHeader{font-size: 105px;})
+  .logo-pic{margin-left:230px;}
 }
 
 @media(min-width:993px) and (max-width:1199px){
   #first-link { margin-left:-6px; }
   #second-link{ margin-left: 60px; }
   #third-link{ margin-left:60px; }
-  #welcomeHeader{font-size: 115px;})
+  .logo-pic{margin-left:325px;}
 }
 
 @media(min-width:1200px) and (max-width:1439px){
   #first-link { margin-left:15px; }
   #second-link{ margin-left: 105px; }
   #third-link{ margin-left:105px; }
-  #welcomeHeader{font-size: 125px;})
+  .logo-pic{margin-left:425px;}
 }
-
-
-
-
+ 
