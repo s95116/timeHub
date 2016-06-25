@@ -13,6 +13,8 @@ $(document).ready(function(){
 		startTime = new Date().getTime();
 
     $('#start').attr('disabled',true);
+    //Grays out start button
+    $('#start').css('opacity',0.2);
 		console.log(startTime);
 	})
 
@@ -72,7 +74,7 @@ $(document).ready(function(){
 
       var options = {
   		height: 400,
-  		title: 'New Info-graph Statistics',
+  		title: 'New Infograph Posting Statistics',
   		legend: {position: 'none'}
 		};
       var data = response.getDataTable();

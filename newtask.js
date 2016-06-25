@@ -8,7 +8,7 @@ $("#addNewTask").on("click", function(){
 	var newTask = $("#newTaskInput").val().trim();
 	var description = $("#newDescriptionInput").val().trim();
 	var taskTime = moment($("#newtaskTime").val().trim();
-	var comments = $("#newComment").val().trim();
+	var comment = $("#newComment").val().trim();
 
 	// Creates new variable that holds time-train data
 	var newTrain = {
