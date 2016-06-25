@@ -84,4 +84,35 @@ table.table p.generalInfo {
   font-size: 15px !important;
   font-weight: 400 !important;
 }
+
+/*Media Queries*/
+@media(min-width:600px) and (max-width:749px){
+  #first-link { margin-left:55px; }
+  #second-link{ margin-left: 95px; }
+  #third-link{ margin-left: 95px; }
+  #first-link, #second-link, #third-link{
+  font-size: 20px;}
+  img{margin-left:-40px;})
+}
+
+@media(min-width:750px) and (max-width:992px) {
+  #first-link { margin-left:20px; }
+  #second-link{ margin-left: 80px; }
+  #third-link{ margin-left:80px; }
+  #welcomeHeader{font-size: 105px;})
+}
+
+@media(min-width:993px) and (max-width:1199px){
+  #first-link { margin-left:-6px; }
+  #second-link{ margin-left: 60px; }
+  #third-link{ margin-left:60px; }
+  #welcomeHeader{font-size: 115px;})
+}
+
+@media(min-width:1200px) and (max-width:1439px){
+  #first-link { margin-left:15px; }
+  #second-link{ margin-left: 105px; }
+  #third-link{ margin-left:105px; }
+  #welcomeHeader{font-size: 125px;})
+}
  
