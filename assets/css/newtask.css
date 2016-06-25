@@ -4,7 +4,7 @@ body {
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
 }
 
-img{
+.logo-pic{
   margin-left: 425px;
   padding-bottom: 30px;
 }
@@ -92,27 +92,27 @@ table.table p.generalInfo {
   #third-link{ margin-left: 95px; }
   #first-link, #second-link, #third-link{
   font-size: 20px;}
-  img{margin-left:-40px;})
+  .logo-pic{margin-left:180px;}
 }
 
 @media(min-width:750px) and (max-width:992px) {
   #first-link { margin-left:20px; }
   #second-link{ margin-left: 80px; }
   #third-link{ margin-left:80px; }
-  #welcomeHeader{font-size: 105px;})
+  .logo-pic{margin-left:230px;}
 }
 
 @media(min-width:993px) and (max-width:1199px){
   #first-link { margin-left:-6px; }
   #second-link{ margin-left: 60px; }
   #third-link{ margin-left:60px; }
-  #welcomeHeader{font-size: 115px;})
+  .logo-pic{margin-left:325px;}
 }
 
 @media(min-width:1200px) and (max-width:1439px){
   #first-link { margin-left:15px; }
   #second-link{ margin-left: 105px; }
   #third-link{ margin-left:105px; }
-  #welcomeHeader{font-size: 125px;})
+  .logo-pic{margin-left:425px;}
 }
  
